@@ -43,11 +43,39 @@ $(document).ready(function() {
         title.text('دعني اعرف نفسي')
     })
 
-    /*if(enBtn.click()){
+    var messageMeName = $('#messageMeName');
+    var messageMeContact = $('#messageMeContact');
+    var messageMeMessage = $('#messageMeMessage');
 
-    }
+    $('#messageMeSend').on('click', function() {
+        var webhookUrl = "https://discord.com/api/webhooks/1244659579317649440/lJxCRGsWdGFaqcG5o1Tg2L7qJe-yVpgyeDWpL9FQyal_JF4OxigTSNPGlEN09JIa2tGj";
+        
 
-    if(arBtn.click()){
+        var name = messageMeName.val();
+        var contact = messageMeContact.val();
+        var message = messageMeMessage.val();
+        
 
-    }*/
+        var content = {
+            content: `__Name__: **${name}**\n__Contact__: **${contact}**\n__Message__: **${message}**`
+        };
+
+
+        $.ajax({
+            url: webhookUrl,
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(content),
+            success: function(data, textStatus, jqXHR) {
+                console.log("Message sent: ", data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error("Error sending message: ", textStatus, errorThrown);
+            }
+        });
+    });
+   /* $.ajax({
+        url: "https://discord.com/api/webhooks/1244659579317649440/lJxCRGsWdGFaqcG5o1Tg2L7qJe-yVpgyeDWpL9FQyal_JF4OxigTSNPGlEN09JIa2tGj",
+        type: "POST",
+    })*/
 });
