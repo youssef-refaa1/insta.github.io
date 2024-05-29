@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const texts = ["I'm a web developer", "Buld your website with me", "Creat website for your  business" , "Website can boost your  business" , "Convert your imagination to code"]; // Add your texts here
+    const texts = ["I'm a web developer", "Build your website with me", "Create website for your  business" , "Website can boost your  business" , "Convert your imagination to code"]; // Add your texts here
     let index = 0;
 
     function typeWriter(text, i, callback) {
@@ -60,19 +60,30 @@ $(document).ready(function() {
             content: `__Name__: **${name}**\n__Contact__: **${contact}**\n__Message__: **${message}**`
         };
 
+        if(name ==''){
+            messageMeName.attr("placeholder" , "Please Type Your Name Here")
+            messageMeName.css('font-size' , '1em')
+            
+            messageMeContact.attr("placeholder" , "Please Type Your Contact Here")
+            messageMeContact.css('font-size' , '1em')
 
-        $.ajax({
-            url: webhookUrl,
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify(content),
-            success: function(data, textStatus, jqXHR) {
-                console.log("Message sent: ", data);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error("Error sending message: ", textStatus, errorThrown);
-            }
-        });
+            messageMeMessage.attr("placeholder" , "Please Type Your Message Here")
+            messageMeMessage.css('font-size' , '1em')
+        }
+        else{
+            $.ajax({
+                url: webhookUrl,
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(content),
+                success: function(data, textStatus, jqXHR) {
+                    console.log("Message sent: ", data);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error("Error sending message: ", textStatus, errorThrown);
+                }
+            });
+        }
     });
    /* $.ajax({
         url: "https://discord.com/api/webhooks/1244659579317649440/lJxCRGsWdGFaqcG5o1Tg2L7qJe-yVpgyeDWpL9FQyal_JF4OxigTSNPGlEN09JIa2tGj",

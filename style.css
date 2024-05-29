@@ -266,3 +266,345 @@ header{
     border: none;
     padding: 5px;
 }
+
+.myContacts{
+    display: flex;
+    flex-direction: column;
+    margin: 10px; 
+    align-items: center;
+}
+
+.myContactsContent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    background-color: rgb(84, 132, 245);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.email{
+    margin: 10px;
+}
+
+.phoneNumber{
+    margin: 10px;
+}
+
+.instagram{
+    margin: 10px;
+}
+
+.contactTitle{
+    font-size: 1.3em;
+    color: rgb(255, 255, 255);
+}
+
+a{
+    color: white;
+}
+
+.contactMeTitle{
+    margin: 30px;
+    font-size: 2em;
+    color: rgb(53, 53, 53);
+}
+
+@media (max-width: 767px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo{
+        color: rgb(75, 75, 75);
+        font-size: 1.5em;
+    }
+    
+    .nav{
+        text-decoration: none;
+        color: rgb(75, 75, 75);
+        margin: 10px;
+        font-size: 1em;
+    }
+    
+    .homeSection{
+        background-color: whitesmoke;
+        padding-top: 150px;
+        width: 100%;
+    }
+    
+    .homeRightHandSide{
+        font-size: 1.6em;
+        width: 100%;
+        margin-left: 0%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .name{
+        font-size: 0.7em;
+    }
+
+    .homeRightHandSide span{
+        color: rgb(255, 123, 0);
+    }
+    
+    .homeContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .homeLeftHandSide img{
+        mix-blend-mode: multiply;
+        width: 60%;
+        float: right;
+        margin-right: 20%;
+    }
+    
+    .homeLeftHandSide{
+        width: fit-content;
+    }
+    
+    #changeText{
+        font-weight: 300;
+        margin-top: 20px;
+        border-top: 1px solid black;
+        padding-top: 20px;
+    }
+    
+    .whoIsMe{
+        border: none;
+        background-color: rgb(84,133,245);
+        color: white;
+        padding: 10px;
+        font-size: 0.7em;
+        margin-top: 50px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: 0.5s ease;
+    }
+    
+    .whoIsMe:hover{
+        box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    }
+    
+    .aboutMeImg{
+        width: 80%;
+    }
+    
+    .aboutSection{
+        display: flex;
+        align-items: center;
+        padding-right: 10%;
+        padding-left: 10%;
+        position: relative;
+        flex-direction: column;
+    }
+    
+    
+    .aboutTitle{
+        margin-bottom: 5%;
+        font-size: 2em;
+        color: rgb(53, 53, 53);
+    }
+    
+    .lang{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 30px;
+    }
+    
+    .langBtn{
+        background: none;
+        border: none;
+        font-size: 1.2em;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    #enLang{
+        color: rgb(27, 95, 255);
+    }
+    
+    
+    .mySkillsBtn{
+        border: 2px solid rgb(84,133,245);
+        background-color: rgb(84,133,245);
+        color: white;
+        padding: 10px;
+        font-size: 1.2em;
+        margin-top: 50px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 700;
+        transition: 0.5s ease;
+        margin: 2%;
+    }
+    
+    
+    .mySkillsBtn:hover{
+        box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    }
+    
+    .contactBtn{
+        border: 2px solid black;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        font-size: 1.2em;
+        margin-top: 50px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 700;
+        transition: 0.5s ease;
+        margin: 2%;
+        background: none;
+    }
+    
+    .skillsSection{
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skillsTitle{
+        color: rgb(61, 61, 61);
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .skillImg{
+        width: 100px;
+        min-width: 50px;
+    }
+    
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 37px 5px rgba(0,0,0,0.20);
+        margin: 10px;
+        justify-content: center;
+    }
+    
+    .skillsContainer{
+        padding: 20px;
+        display: flex;
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contactSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contactContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .messageMe{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    #messageMeName{
+        font-size: 1.5em;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #messageMeContact{
+        font-size: 1.5em;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #messageMeMessage{
+        font-size: 1.1em;
+        padding: 5px;
+        min-height: 10vh;
+        min-width: 310px;
+        max-width: 310px;
+        max-height: 10vh;
+    }
+    
+    #messageMeSend{
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 10px;
+        background-color: rgb(84,133,245);
+        color: white;
+        border: none;
+        padding: 5px;
+    }
+    
+    .myContacts{
+        display: flex;
+        flex-direction: column;
+        margin: 10px; 
+        align-items: center;
+    }
+    
+    .myContactsContent{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        background-color: rgb(84, 132, 245);
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+    
+    .email{
+        margin: 10px;
+    }
+    
+    .phoneNumber{
+        margin: 10px;
+    }
+    
+    .instagram{
+        margin: 10px;
+    }
+    
+    .contactTitle{
+        font-size: 1.3em;
+        color: rgb(255, 255, 255);
+    }
+    
+    a{
+        color: white;
+    }
+    
+    .contactMeTitle{
+        margin: 30px;
+        font-size: 2em;
+        color: rgb(53, 53, 53);
+    }
+}
