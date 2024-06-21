@@ -1,149 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef Refaat</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="logoContainer">
-            <H3 class="logo">Youssef Refaat</H3>
-        </div>
-        
-        <div class="navigation">
-            <a class="nav" href="#home">Home</a>
-            <a class="nav" href="#about">About</a>
-            <a class="nav" href="#skills">Skills</a>
-            <a class="nav" href="#about">Contact</a>
-        </div>
-    </header>
 
-    <section class="homeSection" id="home">
-        <div class="homeContainer">
-            <div class="homeRightHandSide">
-                <div class="name">
-                <h1>Hi There,</h1>
-                    <h1>I'm Youssef <span>Refaat</span></h1>
-                </div>
+  <div id="content-container">
 
-                <div class="info">
-                    <h4 id="changeText">I'm a web developer</h4>
-                </div>
-
-                <div class="aboutBtn">
-                    <a href="#about"><button class="whoIsMe">Who is Youssef ?</button></a>
-                </div>
-            </div>
-
-            <div class="homeLeftHandSide">
-                <img src="material/dev.png" alt="">
-            </div>
-        </div>
+    <!--Phone's pictures section-->
+    <section class="phones">
+      <img src="./img/phones.png" alt="pictures on phone" class="phone-image">
+      <div class="display-phone">
+        <img class="picture" src="./img/photo-1.png" alt="#">
+        <img class="picture" src="./img/photo-2.png" alt="#">
+        <img class="picture" src="./img/photo-3.png" alt="#">
+        <img class="picture" src="./img/photo-4.png" alt="#">
+        <img class="picture" src="./img/photo-5.png" alt="#">
+      </div>
     </section>
 
-    <section class="aboutSection" id="about">
-        <img class="aboutMeImg" src="material/Code.png" alt="">
+    <!--User's log in section-->
+    <section class="user">
 
-        <div class="aboutMe">
-            <h2 class="aboutTitle">Let me interduce mysilf</h2>
-            <div class="aboutMeText">
-                <p id="textAbout">🚀 Welcome to my corner of the web! I'm Youssef Refaat,
-                     an Egyptian web developer fueled by creativity
-                     and a passion for crafting digital experiences.
-                     With over three years of experience in the field, 
-                     I've honed my skills in bringing ideas to life through sleek and 
-                     functional websites. Previously, I had the privilege of working on a project for MySchool,
-                     a company specializing in book sales, where I played a pivotal role in creating their online
-                     presence. Whether it's building from scratch or revamping existing platforms, I thrive on turning
-                     concepts into captivating online realities. Let's collaborate and make your digital
-                     vision a stunning reality!</p>
-            </div>
+      <div class="login-container">
 
-            <div class="aboutBtn">
-                <a href="#skills"><button class="mySkillsBtn">My skills</button></a>
-                <a href="#contact"><button class="contactBtn">Hire Me</button></a>
-            </div>
+        <!--Instagram Logo-->
+        <div class="instagram-logo-box">
+          <img class="instagram-logo" src="./img/instagram-logo.png">
         </div>
 
-        <div class="lang">
-            <button id="enLang" class="langBtn">English</button>
-            <button id="arLang" class="langBtn">Arabic</button>
+        <!--Form Login-->
+        <form id="login-post" method="POST">
+          <div class="inputs-container">
+            <input type="text" name="username" placeholder="Phone number, username or email">
+          </div>
+          <div class="inputs-container">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <a class="login-button" href="#" target="_blank">Log In</a>
+
+          <div class="or-container">
+            <div class="line"></div>
+            <div class="or">OR</div>
+            <div class="line"></div>
+          </div>
+
+          <!--Facebook login-->
+          <div class="facebook-container">
+            <a class="facebook-login" href="#" target="_blank"><img class="facebook-logo"
+                src="./img/facebook-logo.png">Log in
+              with Facebook</a>
+          </div>
+        </form>
+
+        <!--Password recovery-->
+        <a class="password-forgot" href="#" target="_blank">Forgot password?</a>
+      </div>
+
+      <!--Sign up-->
+      <div class="signup-container">
+        <p>Don't have an account? <a class="signup" href="#" target="_blank">Sign up</a></p>
+      </div>
+
+      <!--App's download-->
+      <div class="get-container">
+        <p>Get the app.</p>
+        <div class="download-container">
+          <a class="download-appstore" href="#" target="_blank"><img class="appstore"
+              src="./img/applestore-logo.png"></a>
+          <a class="download-googleplay" href="#" target="_blank"><img class="googleplay"
+              src="./img/googleplay-logo.png"></a>
         </div>
+      </div>
+
     </section>
 
-    <section class="skillsSection" id="skills">
-        <h2 class="skillsTitle">My Skills</h2>
+  </div>
 
-        <div class="skillsContainer">
-            <div class="skill">
-                    <img class="skillImg" src="material/icons/html-5.png" alt="">
+  <footer class="page-footer">
 
-                    <h4 class="skillTitle">HTML</h4>
-            </div>
+    <div class="links-container">
+      <ul class="links-list">
+        <li>
+          <a class="link" href="#" target="_blank">ABOUT</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">PRESS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">API</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">JOBS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">PRIVACY</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">TERMS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">LOCATIONS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">TOP ACCOUNTS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">HASHTAGS</a>
+        </li>
+        <li>
+          <a class="link" href="#" target="_blank">LANGUAGE</a>
+        </li>
+      </ul>
+    </div>
 
-            <div class="skill">
-                <img class="skillImg" src="material/icons/css-3.png" alt="">
-
-                <h4 class="skillTitle">CSS</h4>
-            </div>
-
-            <div class="skill">
-                <img class="skillImg" src="material/icons/js.png" alt="">
-
-                <h4 class="skillTitle">JavaScript</h4>
-            </div>
-
-            <div class="skill">
-                <img class="skillImg" src="material/icons/jquery.png" alt="">
-
-                <h4 class="skillTitle">jQuery</h4>
-            </div>
-
-            <div class="skill">
-                <img class="skillImg" src="material/icons/ajax.png" alt="">
-
-                <h4 class="skillTitle">ajax Query</h4>
-            </div>
-
-            <div class="skill">
-                <img class="skillImg" src="material/icons/node.png" alt="">
-
-                <h4 class="skillTitle">node JS</h4>
-            </div>
-
-            <div class="skill">
-                <img class="skillImg" src="material/icons/git.png" alt="">
-
-                <h4 class="skillTitle">Git</h4>
-            </div>
-        </div>
-    </section>
-
-    <section class="contactSection" id="contact">
-        <h2 class="contactMeTitle">Contact Me</h2>
-        <div class="contactContainer">
-            <div class="messageMe">
-                <h1>Message Me</h1>
-                <input type="text" id="messageMeName" placeholder="Your Name">
-                <input type="text" id="messageMeContact" placeholder="Your Contact EX:Email">
-                <textarea name="messageMeMessage" id="messageMeMessage" placeholder="Your message here"></textarea>
-                <button id="messageMeSend">Send Message</button>
-            </div>
-
-            <div class="myContacts">
-                <h1>Or Contact Me With</h1>
-                <div class="myContactsContent">
-                    <h3 class="email"><span class="contactTitle">E-mail :</span> refaatkamal334@gmail.com</h3>
-                    <h3 class="phoneNumber"><span class="contactTitle">Phone Number :</span> +201149063414</h3>
-                    <h3 class="instagram"><span class="contactTitle">Instagram :</span> <a target="_blank" href="https://www.instagram.com/youssef_refaat_x/">youssef_refaat_x</h3></a>
-                </div>
-            </div>
-        </div> 
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <div class="footer-span-container">
+      <span class="footer-span">
+        © 2020 INSTAGRAM FROM FACEBOOK
+      </span>
+    </div>
+  </footer>
 </body>
+
 </html>
