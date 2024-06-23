@@ -249,6 +249,13 @@ body{
   cursor: pointer;
 }
 
+
+.errorUser{
+  color: red;
+  font-weight: 400;
+  display: none;
+}
+
 @media(max-width: 1005px){
 
   .page-footer{
